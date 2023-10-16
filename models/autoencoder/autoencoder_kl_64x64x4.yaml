@@ -1,0 +1,39 @@
+model:
+  base_learning_rate: 2e-5
+  target: ldm.models.autoencoder.AutoencoderKL
+  params:
+    image_key: source
+    embed_dim: 4
+    monitor: val/rec_loss
+
+    ddconfig:
+      double_z: True
+      z_channels: 4
+      resolution: 512
+      in_channels: 1
+      out_ch: 1
+      ch: 128
+      ch_mult:
+      - 1
+      - 2
+      - 4
+      - 4
+      num_res_blocks: 3
+      attn_resolutions: []
+      dropout: 0.0
+
+    lossconfig:
+      target: ldm.modules.losses.LPIPSWithDiscriminator
+      params:
+        kl_weight: 0.000001
+        disc_start: 200000
+        disc_in_channels: 1
+        disc_weight: 0.5
+        pixel_loss: "l1"
+
+data:
+  batch_size: 2
+  base_dir: /home/first/data
+  json_list: ["jsons/abdomen_ct2mr.json","jsons/abdomen_mr2ct.json","jsons/brain_ct2mr.json","jsons/brain_mr2ct.json","jsons/pelvis_ct2mr.json","jsons/pelvis_mr2ct.json"]
+  num_workers: 8
+  pin_memory: True
