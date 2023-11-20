@@ -39,10 +39,4 @@ We currently provide the following checkpoints:
 ## Training and Inference
 
 
-
-
 ## Citation
-
-
-=======
->>>>>>> 89cce2c2bf13b019c5f5e1ba285a7b9224108036
