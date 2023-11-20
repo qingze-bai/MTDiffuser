@@ -69,7 +69,7 @@ if __name__ == '__main__':
     callbacks = []
     # val/loss_ema
     callbacks.append(ModelCheckpoint(monitor=cfg.model.params.monitor,
-                                     save_top_k=3, mode='min', filename='latest_checkpoint'))
+                                     save_top_k=1, mode='min', filename='latest_checkpoint'))
 
     callbacks.append(ModelCheckpoint(every_n_train_steps=20000, save_top_k=-1,
                                      filename='{epoch}-{step}-200000-{train/rec_loss:.2f}'))
