@@ -1,6 +1,4 @@
 # MTDiffuser
-<<<<<<< HEAD
-
 [[`Paper`](#)] [[`Dataset`](https://amos22.grand-challenge.org/)] [[`BibTeX`](#)]
 
 ![Variable-Shape design](assets/fig01.jpg?raw=true)
