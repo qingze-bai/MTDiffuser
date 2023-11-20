@@ -1,4 +1,5 @@
 # MTDiffuser
+<<<<<<< HEAD
 
 [[`Paper`](#)] [[`Dataset`](https://amos22.grand-challenge.org/)] [[`BibTeX`](#)]
 
@@ -45,3 +46,5 @@ We currently provide the following checkpoints:
 ## Citation
 
 
+=======
+>>>>>>> 89cce2c2bf13b019c5f5e1ba285a7b9224108036
